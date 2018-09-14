@@ -40,8 +40,10 @@ void printvectorArchivoJug(vector<Jugador*>);
 
 void BuscarRecursos(vector<Civilizacion*>&,int,int);
 
-void llenarvectorEdificios(vector<Civilizacion*>&,int);
-void printvectorEdificios(vector<Civilizacion*>);
+void llenarvectorEdificios(vector<Jugador*>&,int);
+void printvectorEdificios(vector<Jugador*>);
+
+void llenarvectorCivilizacionmas5(vector<Civilizacion*>& ,int,int);
 
 void DesterrarvectorCivilizacion(vector<Civilizacion*>&,int);
 
@@ -50,7 +52,7 @@ int main(){
 char ejecucion = 'y';
 bool turno = false;
 int opcion = 0;
-int Pos=0,Pelec = 0,cantAld = 0;
+int Pos=0,Pelec = 0,cantAld = 1,cantCas = 1;
 //fstream entrada;
 
 vector<Civilizacion*> miVectorCivilizacion;
@@ -71,8 +73,8 @@ do{
             llenarvectorCivilizacion(miVectorCivilizacion);
             printvectorCivilizacion(miVectorCivilizacion);
 
-            cout<<"---->En El Fichero<----"<<endl;
-            abrir();
+            //cout<<"---->En El Fichero<----"<<endl;
+            //abrir();
 
             break;
         }
@@ -113,10 +115,13 @@ do{
                     break;
                 }
                 case 2:{
-
+                    printvectorCivilizacion(miVectorCivilizacion);
                     cout<<"¿Cuantos Aldeanos Quiere mandar?"<<endl;
                     cin>>cantAld;
+                    cout<<"Seleccione una segun los numeros de la lista.";
+                    cin>>Pos;
                     BuscarRecursos(miVectorCivilizacion,Pos,cantAld);
+                    printvectorCivilizacion(miVectorCivilizacion);
 
 
                     break;
@@ -124,10 +129,15 @@ do{
                 case 3:{
                     switch (menuedificio()){
                         case 1:{
+                            printvectorCivilizacion(miVectorCivilizacion);
+                            printvectorCrearJugador(miVectorJugador);
                             cout<<"Ingrese la Posicion: "<<endl;
         	                cin>>Pos;
-                            llenarvectorEdificios(miVectorCivilizacion, Pos);
-                            printvectorEdificios(miVectorCivilizacion);
+                            cout<<"Cuantas casas?"<<endl;
+                            cin>>cantCas;
+                            llenarvectorEdificios(miVectorJugador, Pos);
+                            llenarvectorCivilizacionmas5(miVectorCivilizacion,Pos, cantCas);
+                            printvectorEdificios(miVectorJugador);
 
                             break;
                         }
@@ -310,7 +320,7 @@ int menutropa(){
 
 void llenarvectorCivilizacion(vector<Civilizacion*>& pVectorCivilizacion){
         Civilizacion* civilizacion;
-        int oro=0,madera=0, piedra=0,alimento=150,poblacion=0,poblacionMax=350,capacidad=5, aldeano=0;
+        int oro=0,madera=0, piedra=0,alimento=250,poblacion=0,poblacionMax=350,capacidad=5, aldeano=0;
         string nomb;
                 civilizacion = new Civilizacion();
                 cout<<"Ingrese el Nombre de la aldea: ";
@@ -338,7 +348,7 @@ void printvectorCivilizacion(vector<Civilizacion*> pVectorCivilizacion){
                     <<"   Madera de la Civilización: "<<pVectorCivilizacion[i]->getMadera()<<endl
                     <<"   Piedras de la Civilización: "<<pVectorCivilizacion[i]->getPiedra()<<endl
                     <<"   Alimento de la Civilización: "<<pVectorCivilizacion[i]->getAlimento()<<endl
-                    <<"   Población de la Civilización: "<<pVectorCivilizacion[i]->getPoblacion()<<endl
+                    <<"   Población de la Civilización: "<<pVectorCivilizacion[i]->getAldeano()<<endl
                     <<"   Población Máxima de la Civilización: "<<pVectorCivilizacion[i]->getPoblacionMAX()<<endl
                     <<"   Capacidad de la Civilización: "<<pVectorCivilizacion[i]->getCapacidad()<<endl
                     <<"   Aldeanos de la Civilización: "<<pVectorCivilizacion[i]->getAldeano()<<endl
@@ -346,34 +356,68 @@ void printvectorCivilizacion(vector<Civilizacion*> pVectorCivilizacion){
                 }
         }
 }
-void llenarvectorEdificios(vector<Civilizacion*>& pVectorCivilizacion, vector<Jugador*>& pVectorJugador, int pos){
+void llenarvectorEdificios( vector<Jugador*>& pVectorJugador, int pos){
         Civilizacion* civilizacion;
         Jugador* jugador;
+        jugador = new Jugador();
         
         //int oro=0,madera=0, piedra=0,alimento=150,poblacion=0,poblacionMax=350,capacidad=5, aldeano=0;
-        string nomb;
+        //string nomb;
             
            for(int i=0;i<pVectorJugador.size();i++){    
                 if(pVectorJugador[pos] == pVectorJugador[i]){
                 
-                
-               //pVectorJugador[i]->getCivilizacion()->addCasa();
+                for(int i = 0; i < pVectorJugador.size(); i++){
+                    Casas* casa = new Casas();
 
-                pVectorCivilizacion.push_back(civilizacion);
+                    if(pVectorJugador[pos] == pVectorJugador[i]){
+                    pVectorJugador[i]->getCivilizacion()->addCasa(casa);
+                    }
+                }
+                //pVectorJugador[i]->getCivilizacion()->addCasa();
+                pVectorJugador.push_back(jugador);
                 }
             }
         
 }
-void printvectorEdificios(vector<Civilizacion*> pVectorCivilizacion,int pos){
-        cout<<endl<<"*****Edificios*****"<<endl;
+void llenarvectorCivilizacionmas5(vector<Civilizacion*>& pVectorCivilizacion,int pos,int cantCasas){
+        Civilizacion* civilizacion;
+        //int cont = cantCasas*50;
+        int madera = cantCasas*50;
+        int capacidad = cantCasas*5;
         
-        for(int i=0;i<pVectorCivilizacion.size();i++){    
-                if (pVectorCivilizacion[i] != NULL){
-                cout<<i<<")"<<" Nombre de la Civilización: "<<pVectorCivilizacion[i]->getName()<<endl
-                    <<"   Oro de la Civilización: "<<pVectorCivilizacion[i]->getEdificios(pos)<<endl
-                    <<"*******************************************************"<<endl;	
+        //string nomb;
+            for(int i = 0; i < pVectorCivilizacion.size();i++){
+  //          cout<<"entre";
+            if(pVectorCivilizacion[pos] == pVectorCivilizacion[i]){
+                //civilizacion = new Civilizacion();
+                if( pVectorCivilizacion[pos]->getPoblacion() <= 350 && cantCasas*50 <= pVectorCivilizacion[pos]->getMadera()){
+                
+                pVectorCivilizacion[i]->getName();
+                pVectorCivilizacion[i]->getOro();
+                pVectorCivilizacion[i]->setMadera(pVectorCivilizacion[i]->getMadera()-(madera));
+                pVectorCivilizacion[i]->getPiedra();
+                pVectorCivilizacion[i]->getAlimento();
+                pVectorCivilizacion[i]->getPoblacion();
+                pVectorCivilizacion[i]->getPoblacionMAX();
+                pVectorCivilizacion[i]->setCapacidad(pVectorCivilizacion[i]->getCapacidad()+(capacidad));
+                pVectorCivilizacion[i]->getAldeano();
+//cout<<"entre otra vez";
+                //pVectorCivilizacion.push_back(civilizacion);
                 }
+            }
         }
+}
+void printvectorEdificios(vector<Jugador*> pVectorJugador){
+        cout<<endl<<"*****Casas*****"<<endl;
+        Casas* casa;
+        for(int i=0;i<pVectorJugador.size();i++){  
+              
+                cout<< i <<")"<<"Jugador: "<<pVectorJugador[i]->getNombre()<<endl
+                    //<<"Casas: "<<pVectorJugador[i]->getCivilizacion()<<endl
+                    <<"_____________________________________/*"<<endl;	
+        }
+        
 }
 
 void printvectorArchivoCiv(vector<Civilizacion*> pVectorCivilizacion){
@@ -412,14 +456,14 @@ void printvectorArchivoCiv(vector<Civilizacion*> pVectorCivilizacion){
 }
 
 
-void llenarvectorCrearJugador(vector<Jugador*>& pVectorJugador,int pos){
+void llenarvectorCrearJugador(vector<Jugador*>& pVectorJugador){
         Jugador* jugador;
-        Civilizacion* civi;
+        //Civilizacion* civi;
         string nomb;
                 jugador = new Jugador();
-                /*cout<<"Ingrese el Nombre del Jugador (Sin Espacios): ";
+                cout<<"Ingrese el Nombre del Jugador (Sin Espacios): ";
                 cin>>nomb;
-                jugador->setNombre(nomb);*/
+                jugador->setNombre(nomb);/*
                 
                 for(int i = 0; i < pVectorJugador.size(); i++){
                     Casas* casa = new Casas();
@@ -427,23 +471,17 @@ void llenarvectorCrearJugador(vector<Jugador*>& pVectorJugador,int pos){
                     if(pVectorJugador[pos] == pVectorJugador[i]){
                     pVectorJugador[i]->getCivilizacion()->addCasa(casa);
                     }
-                }
-                
-                
-
-
+                }*/
                 pVectorJugador.push_back(jugador);
         
 }
 void printvectorCrearJugador(vector<Jugador*> pVectorJugador){
-        cout<<endl<<"*****Casas*****"<<endl;
-        //Casas* casa;
-        for(int i=0;i<pVectorJugador.size();i++){  
-              
+        cout<<endl<<"*****Jugadores*****"<<endl;
+        
+        for(int i=0;i<pVectorJugador.size();i++){    
                 
                 cout<< i <<")"<<"Jugador: "<<pVectorJugador[i]->getNombre()<<endl
-                    <<"Jugador: "<<pVectorJugador[i]->getCivilizacion()->getEdificios(i)<<endl
-                    <<"_____________________________________/*"<<endl;	
+                    <<"_____________________________________/*"<<endl;
         }
 }
 
@@ -465,36 +503,10 @@ void printvectorArchivoJug(vector<Jugador*> pVectorJugador){
         }
 }
 
-void DesterrarvectorCivilizacion(vector<Civilizacion*>& pVectorCivilizacion, int pos){
-        Civilizacion* civilizacion;
-        int oro=0, madera=0, piedra=0, alimento=100, poblacion=0,aldeano = 0;
-        string nomb;
-
-        for(int i = 0; i < pVectorCivilizacion.size();i++){
-  //          cout<<"entre";
-            if(pVectorCivilizacion[pos] == pVectorCivilizacion[i]){
-                //civilizacion = new Civilizacion();
-                
-                pVectorCivilizacion[i]->getName();
-                pVectorCivilizacion[i]->setOro(oro);
-                pVectorCivilizacion[i]->setMadera(madera);
-                pVectorCivilizacion[i]->setPiedra(piedra);
-                pVectorCivilizacion[i]->setAlimento(alimento);
-                pVectorCivilizacion[i]->setPoblacion(poblacion);
-                pVectorCivilizacion[i]->getPoblacionMAX();
-                pVectorCivilizacion[i]->getCapacidad();
-                pVectorCivilizacion[i]->setAldeano(aldeano);
-//cout<<"entre otra vez";
-                //pVectorCivilizacion.push_back(civilizacion);
-            }
-        }
-}
 
 void llenarvectorAldeano(vector<Aldeanos*>& pVectorAldeano){
         Aldeanos* aldeano;
         char sx;
-            
-            
                     aldeano = new Aldeanos();
                     cout<<"Ingrese el sexo (F ó M): ";
                     cin>>sx;
@@ -530,7 +542,7 @@ void sumarvectorAldeano(vector<Civilizacion*> pVectorCivilizacion,int pos){
             }
 }
 
-void BuscarRecursos(vector<Civilizacion*>& pVectorCivilizacion, int pos, int CantAldeanos){
+void BuscarRecursos(vector<Civilizacion*>& pVectorCivilizacion, int pos, int CantAldeanos=1){
         Civilizacion* civilizacion;
         int oro = CantAldeanos*30, madera = CantAldeanos*40, piedra = CantAldeanos*20, alimento = CantAldeanos*50, menos =CantAldeanos*55, poblacion, aldeano;
         string nomb;
@@ -539,21 +551,46 @@ void BuscarRecursos(vector<Civilizacion*>& pVectorCivilizacion, int pos, int Can
   //          cout<<"entre";
             if(pVectorCivilizacion[pos] == pVectorCivilizacion[i]){
                 //civilizacion = new Civilizacion();
-                if(CantAldeanos <= pVectorCivilizacion[pos]->getAldeano() && CantAldeanos*55 <= pVectorCivilizacion[pos]->getAlimento()){
+                if(pVectorCivilizacion[pos]->getAldeano() >= 0  && CantAldeanos <= pVectorCivilizacion[pos]->getAldeano() && pVectorCivilizacion[pos]->getAlimento() >= CantAldeanos*55){
+                pVectorCivilizacion[i]->getName();
+                pVectorCivilizacion[i]->setOro(pVectorCivilizacion[i]->getOro()+(oro));
+                pVectorCivilizacion[i]->setMadera(pVectorCivilizacion[i]->getMadera()+(madera));
+                pVectorCivilizacion[i]->setPiedra(pVectorCivilizacion[i]->getPiedra()+(piedra));
+                pVectorCivilizacion[i]->setAlimento(pVectorCivilizacion[i]->getAlimento()+(alimento-menos));
+                pVectorCivilizacion[i]->getPoblacion();
+                pVectorCivilizacion[i]->getPoblacionMAX();
+                pVectorCivilizacion[i]->getCapacidad();
+                pVectorCivilizacion[i]->getAldeano();
+                //cout<<"entre otra vez";
+                //pVectorCivilizacion.push_back(civilizacion);
+                }else{
+                    cout<<"cantidad de Aldeanos o Alimentos insuficientes!!!!"<<endl;
+                } 
+            }
+        }
+}
+
+void DesterrarvectorCivilizacion(vector<Civilizacion*>& pVectorCivilizacion, int pos){
+        Civilizacion* civilizacion;
+        int oro=0, madera=0, piedra=0, alimento=100, poblacion=0,aldeano = 0;
+        string nomb;
+
+        for(int i = 0; i < pVectorCivilizacion.size();i++){
+  //          cout<<"entre";
+            if(pVectorCivilizacion[pos] == pVectorCivilizacion[i]){
+                //civilizacion = new Civilizacion();
+                
                 pVectorCivilizacion[i]->getName();
                 pVectorCivilizacion[i]->setOro(oro);
                 pVectorCivilizacion[i]->setMadera(madera);
                 pVectorCivilizacion[i]->setPiedra(piedra);
-                pVectorCivilizacion[i]->setAlimento(pVectorCivilizacion[i]->getAlimento()+(alimento-menos));
-                pVectorCivilizacion[i]->getPoblacion();
+                pVectorCivilizacion[i]->setAlimento(alimento);
+                pVectorCivilizacion[i]->setPoblacion(poblacion);
                 pVectorCivilizacion[i]->getPoblacionMAX();
                 pVectorCivilizacion[i]->getCapacidad();
                 pVectorCivilizacion[i]->setAldeano(aldeano);
 //cout<<"entre otra vez";
                 //pVectorCivilizacion.push_back(civilizacion);
-                }else{
-                    cout<<"cantidad de Aldeanos u Oro insuficientes!!!!"<<endl;
-                }
             }
         }
 }

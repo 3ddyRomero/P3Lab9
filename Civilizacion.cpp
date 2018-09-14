@@ -8,7 +8,7 @@ Civilizacion::Civilizacion(){
 
 }
 
-Civilizacion::Civilizacion(string pName,int pOro, int pMadera, int pPiedra, int pAlimento, int pPoblacion, int pPoblacionMAX, int pCapacidad, int pAldeano){
+Civilizacion::Civilizacion(string pName,int pOro, int pMadera, int pPiedra, int pAlimento, int pPoblacion, int pPoblacionMAX, int pCapacidad, int pAldeano/*, bool pCuartel, bool pCastillo*/){
     Name = pName;
     Oro = pOro;
     Madera = pMadera;
@@ -18,6 +18,9 @@ Civilizacion::Civilizacion(string pName,int pOro, int pMadera, int pPiedra, int 
     PoblacionMAX = pPoblacionMAX;
     Capacidad = pCapacidad;
     Aldeano = pAldeano;
+    /*cuartel = pCuartel;
+    castillo = pCastillo;
+*/
 }
 
 string Civilizacion::getName(){
@@ -114,7 +117,21 @@ Edificios* Civilizacion::getEdificios(int E){
 void Civilizacion::addCasa(Casas* pCasas){
     casa.push_back(pCasas);
 }
+/*
+bool Civilizacion::getCuartel(){
+    return cuartel;
+}
+void Civilizacion::setCuartel(bool pCuartel){
+    cuartel = pCuartel;
+}
 
+bool Civilizacion::getCastillo(){
+    return castillo;
+}
+void Civilizacion::setCastillo(bool pCastillo){
+    castillo = pCastillo;
+}
+*/
 Civilizacion::~Civilizacion(){
 
 }

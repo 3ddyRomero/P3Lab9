@@ -22,3 +22,195 @@
    Aldeanos de la Civilización: 0
 *******************************************************
 
+*****Civilizaciones*****
+0) Nombre de la Civilización: dsa
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dsa
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+1) Nombre de la Civilización: eee
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: -1016503455
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dsa
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 3
+*******************************************************
+
+*****Civilizaciones*****
+1) Nombre de la Civilización: eee
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: -1016503455
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dad
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 2
+*******************************************************
+
+*****Civilizaciones*****
+1) Nombre de la Civilización: mom
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: afsa
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 1
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: sda
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dd
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Jugadores*****
+0)Jugador: Link
+_____________________________________/*
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: csc
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 1
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: de
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 1
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: xsx
+   Oro de la Civilización: 30
+   Madera de la Civilización: 40
+   Piedras de la Civilización: 20
+   Alimento de la Civilización: 145
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 1
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dde
+   Oro de la Civilización: 60
+   Madera de la Civilización: 80
+   Piedras de la Civilización: 40
+   Alimento de la Civilización: 140
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 2
+*******************************************************
+
+*****Civilizaciones*****
+1) Nombre de la Civilización: farios
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Jugadores*****
+0)Jugador: Link
+_____________________________________/*
+
+*****Jugadores*****
+1)Jugador: fario
+_____________________________________/*
+

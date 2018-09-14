@@ -16,9 +16,12 @@ class Civilizacion{
         int Oro ,Madera ,Piedra, Alimento, Poblacion, PoblacionMAX, Capacidad, Aldeano;
         vector<Tropa*>tropa;
         vector<Casas*>casa;
+        bool cuartel,castillo;
+
+
     public:
         Civilizacion();
-        Civilizacion(string,int, int, int, int, int, int, int,int);
+        Civilizacion(string,int, int, int, int, int, int, int,int/*, bool, bool*/);
 
         string getName();
         void setName(string);
@@ -53,9 +56,13 @@ class Civilizacion{
         Edificios* getEdificios(int);
         void addCasa(Casas*);
 
+        /*bool getCuartel();
+        void setCuartel(bool);
+
+        bool getCastillo();
+        void setCastillo(bool);*/
 
 
-        
 
         ~Civilizacion();
 };

@@ -28,7 +28,9 @@ void printvectorCivilizacion(vector<Civilizacion*>);
 void llenarvectorCrearJugador(vector<Jugador*>&);
 void printvectorCrearJugador(vector<Jugador*>);
 
-void llenarvectorAldeano(vector<Aldeanos*>&,int);
+void llenarvectorAldeano(vector<Aldeanos*>&);
+void sumarvectorAldeano(vector<Civilizacion*>,int);
+
 
 void DesterrarvectorCivilizacion(vector<Civilizacion*>&,int);
 
@@ -37,7 +39,7 @@ int main(){
 char ejecucion = 'y';
 bool turno = false;
 int opcion = 0;
-int Pos=0;
+int Pos=0,Pelec = 0;
 
 vector<Civilizacion*> miVectorCivilizacion;
 vector<Jugador*> miVectorJugador;
@@ -75,6 +77,18 @@ do{
         case 4:{
                 switch (submenu()){
                 case 1:{
+                    
+                    printvectorCivilizacion(miVectorCivilizacion);
+                    
+                    llenarvectorAldeano(miVectorAldeano);
+                    
+                    cout<<"Ingrese la Posicion de la a la cual sumar al Aldeano: "<<endl;
+        	        cin>>Pelec;
+                    sumarvectorAldeano(miVectorCivilizacion, Pelec);
+
+                    printvectorCivilizacion(miVectorCivilizacion);
+
+                    
                     
 
                     break;
@@ -322,17 +336,42 @@ void DesterrarvectorCivilizacion(vector<Civilizacion*>& pVectorCivilizacion, int
         }
 }
 
-void llenarvectorAldeano(vector<Aldeanos*>& pVectorAldeano,int pos){
+void llenarvectorAldeano(vector<Aldeanos*>& pVectorAldeano){
         Aldeanos* aldeano;
         char sx;
-          
-                aldeano = new Aldeanos();
-                cout<<"Ingrese el sexo (F ó M): ";
-                cin>>sx;
-                aldeano->setSexo(sx);
-                aldeano->getSexo();
+            
+            
+                    aldeano = new Aldeanos();
+                    cout<<"Ingrese el sexo (F ó M): ";
+                    cin>>sx;
+                    aldeano->setSexo(sx);
+                    aldeano->getSexo();
 
 
-                pVectorAldeano.push_back(aldeano);
+                    pVectorAldeano.push_back(aldeano);
+                
+             
+}
+
+void sumarvectorAldeano(vector<Civilizacion*> pVectorCivilizacion,int pos){
+        Civilizacion* civilizacion;
+        int aldeano = 1;
         
+            
+            for(int i = 0; i < pVectorCivilizacion.size(); i++){
+                if(pVectorCivilizacion[pos] == pVectorCivilizacion[i]){
+                    pVectorCivilizacion[i]->getName();
+                pVectorCivilizacion[i]->getOro();
+                pVectorCivilizacion[i]->getMadera();
+                pVectorCivilizacion[i]->getPiedra();
+                pVectorCivilizacion[i]->getAlimento();
+                pVectorCivilizacion[i]->getPoblacion();
+                pVectorCivilizacion[i]->getPoblacionMAX();
+                pVectorCivilizacion[i]->getCapacidad();
+                    pVectorCivilizacion[i]->getAldeano()+1;
+
+                    pVectorCivilizacion.push_back(civilizacion);
+                
+                }
+            }
 }

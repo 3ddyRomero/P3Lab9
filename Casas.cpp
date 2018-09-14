@@ -19,8 +19,8 @@ Casas::Casas(int pCostosOro, int pCostosPiedra, int pCostosMadera, int pCasa):Ed
 }
 
 int Casas::getCasa(){
-    Civilizacion* poblac;
-    Casa = poblac->getPoblacion()+5;
+    Civilizacion* aldea;
+    Casa = aldea->getAldeano()+5;
     return Casa;
 }
 

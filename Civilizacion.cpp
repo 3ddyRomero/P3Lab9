@@ -107,6 +107,14 @@ void Civilizacion::addTropa(Tropa* pTropa){
     tropa.push_back(pTropa);
 }
 
+Edificios* Civilizacion::getEdificios(int E){
+    return casa[E];
+}
+
+void Civilizacion::addCasa(Casas* pCasas){
+    casa.push_back(pCasas);
+}
+
 Civilizacion::~Civilizacion(){
 
 }

@@ -1,0 +1,24 @@
+*****Civilizaciones*****
+0) Nombre de la Civilización: agaga
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+
+*****Civilizaciones*****
+0) Nombre de la Civilización: dada
+   Oro de la Civilización: 0
+   Madera de la Civilización: 0
+   Piedras de la Civilización: 0
+   Alimento de la Civilización: 150
+   Población de la Civilización: 0
+   Población Máxima de la Civilización: 350
+   Capacidad de la Civilización: 5
+   Aldeanos de la Civilización: 0
+*******************************************************
+

@@ -29,7 +29,7 @@ void Civilizacion::setName(string pName){
 }
 
 int Civilizacion::getOro(){
-    Oro = 0;
+    //Oro = 0;
     return Oro;
 }
 
@@ -38,7 +38,7 @@ void Civilizacion::setOro(int pOro){
 }
 
 int Civilizacion::getMadera(){
-    Madera = 0;
+    //Madera = 0;
     return Madera;
 }
 
@@ -47,7 +47,7 @@ void Civilizacion::setMadera(int pMadera){
 }
 
 int Civilizacion::getPiedra(){
-    Piedra = 0;
+    //Piedra = 0;
     return Piedra;
 }
 
@@ -56,7 +56,7 @@ void Civilizacion::setPiedra(int pPiedra){
 }
 
 int Civilizacion::getAlimento(){
-    Alimento = 100;
+    //Alimento = 80;
     return Alimento;
 }
 
@@ -65,16 +65,16 @@ void Civilizacion::setAlimento(int pAlimento){
 }
 
 int Civilizacion::getPoblacion(){
-    Poblacion = 0;
+    //Poblacion = 0;
     return Poblacion;
 }
 
 void Civilizacion::setPoblacion(int pPoblacion){
-    Poblacion = pPoblacion;
+    //Poblacion = pPoblacion;
 }
 
 int Civilizacion::getPoblacionMAX(){
-    PoblacionMAX = 200;
+    //PoblacionMAX = 350;
     return PoblacionMAX;
 }
 
@@ -83,7 +83,7 @@ void Civilizacion::setPoblacionMAX(int pPoblacionMAX){
 }
 
 int Civilizacion::getCapacidad(){
-    Capacidad = 5;
+    //Capacidad = 5;
     return Capacidad;
 }
 
@@ -92,7 +92,7 @@ void Civilizacion::setCapacidad(int pCapacidad){
 }
 
 int Civilizacion::getAldeano(){
-    Aldeano = 5;
+    //Aldeano = 5;
     return Aldeano;
 }
 

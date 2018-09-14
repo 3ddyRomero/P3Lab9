@@ -8,10 +8,10 @@ using namespace std;
 
 class Civilizacion{
     private: 
-        int Oro,Madera,Piedra,Alimento;
+        int Oro ,Madera ,Piedra, Alimento, Poblacion;
     public:
         Civilizacion();
-        Civilizacion(int, int, int, int);
+        Civilizacion(int, int, int, int, int);
 
         int getOro();
 		void setOro(int);
@@ -24,6 +24,9 @@ class Civilizacion{
 
         int getAlimento();
 		void setAlimento(int);
+
+        int getPoblacion();
+		void setPoblacion(int);
 
         ~Civilizacion();
 };

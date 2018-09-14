@@ -8,11 +8,12 @@ Civilizacion::Civilizacion(){
 
 }
 
-Civilizacion::Civilizacion(int pOro, int pMadera, int pPiedra, int pAlimento){
+Civilizacion::Civilizacion(int pOro, int pMadera, int pPiedra, int pAlimento, int pPoblacion){
     Oro = pOro;
     Madera = pMadera;
     Piedra = pPiedra;
     Alimento = pAlimento;
+    Poblacion = pPoblacion;
 }
 
 int Civilizacion::getOro(){
@@ -47,6 +48,14 @@ void Civilizacion::setAlimento(int pAlimento){
     Alimento = pAlimento;
 }
 
+int Civilizacion::getPoblacion(){
+    return Poblacion;
+}
+
+void Civilizacion::setPoblacion(int pPoblacion){
+    Poblacion = pPoblacion;
+}
+
 Civilizacion::~Civilizacion(){
-    
+
 }

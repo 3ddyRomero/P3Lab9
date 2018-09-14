@@ -43,6 +43,8 @@ void BuscarRecursos(vector<Civilizacion*>&,int,int);
 void llenarvectorEdificios(vector<Jugador*>&,int);
 void printvectorEdificios(vector<Jugador*>);
 
+void llenarCasas(vector<Casas*>& );
+
 void llenarvectorCivilizacionmas5(vector<Civilizacion*>& ,int,int);
 
 void DesterrarvectorCivilizacion(vector<Civilizacion*>&,int);
@@ -58,7 +60,7 @@ int Pos=0,Pelec = 0,cantAld = 1,cantCas = 1;
 vector<Civilizacion*> miVectorCivilizacion;
 vector<Jugador*> miVectorJugador;
 vector<Aldeanos*> miVectorAldeano;
-    
+vector<Casas*> miVectorCasas;    
     
 
 
@@ -99,6 +101,7 @@ do{
         }
         //Opcion Ingresar en el MENU
         case 4:{
+            
                 switch (submenu()){
                 case 1:{
                     
@@ -129,20 +132,25 @@ do{
                 case 3:{
                     switch (menuedificio()){
                         case 1:{
-                            printvectorCivilizacion(miVectorCivilizacion);
+                            /*printvectorCivilizacion(miVectorCivilizacion);
                             printvectorCrearJugador(miVectorJugador);
                             cout<<"Ingrese la Posicion: "<<endl;
         	                cin>>Pos;
                             cout<<"Cuantas casas?"<<endl;
                             cin>>cantCas;
                             llenarvectorEdificios(miVectorJugador, Pos);
-                            llenarvectorCivilizacionmas5(miVectorCivilizacion,Pos, cantCas);
-                            printvectorEdificios(miVectorJugador);
+                            //llenarvectorCivilizacionmas5(miVectorCivilizacion,Pos, cantCas);
+                            printvectorEdificios(miVectorJugador);*/
+                            cout<<"Ingrese la Posicion: "<<endl;
+        	                cin>>Pos;
+                            llenarCasas(miVectorCasas);
+
+                            
 
                             break;
                         }
-                        case 2:{
                     
+                        case 2:{
                             break;
                         }
                         case 3:{
@@ -218,6 +226,10 @@ do{
             turno = true;
         }
     //}
+
+    miVectorAldeano.clear();
+    miVectorCivilizacion.clear();
+    miVectorJugador.clear();
 
 }
 
@@ -408,6 +420,8 @@ void llenarvectorCivilizacionmas5(vector<Civilizacion*>& pVectorCivilizacion,int
             }
         }
 }
+
+
 void printvectorEdificios(vector<Jugador*> pVectorJugador){
         cout<<endl<<"*****Casas*****"<<endl;
         Casas* casa;
@@ -593,4 +607,28 @@ void DesterrarvectorCivilizacion(vector<Civilizacion*>& pVectorCivilizacion, int
                 //pVectorCivilizacion.push_back(civilizacion);
             }
         }
+}
+
+
+void llenarCasas(vector<Casas*>& pVectorCasas){
+        Casas* casas;
+        int oro = 50, madera = 0, piedra =0 , casita=1;
+//        string nomb;
+    
+        for(int i = 0; i < pVectorCasas.size();i++){
+  //          cout<<"entre";
+            //if(pVectorCasas[pos] == pVectorCasas[i]){
+                casas = new Casas();
+                //if(pVectorCivilizacion[pos]->getAldeano() >= 0  && CantAldeanos <= pVectorCivilizacion[pos]->getAldeano() && pVectorCivilizacion[pos]->getAlimento() >= CantAldeanos*55){
+                pVectorCasas[i]->setCostosOro(oro);
+                pVectorCasas[i]->setCostosPiedra(piedra);
+                pVectorCasas[i]->setCostosMadera(madera);
+                
+                pVectorCasas[i]->setCasa(casita);
+                
+                //cout<<"entre otra vez";
+                //pVectorCivilizacion.push_back(civilizacion);
+                //}
+            }
+        
 }

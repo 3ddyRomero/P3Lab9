@@ -21,6 +21,7 @@ void Aldeanos::setSexo(char pSexo){
 }
 
 int Aldeanos::getCostoAlimentacion(){
+    costoAlimentacion = 55;
     return costoAlimentacion;
 }
 

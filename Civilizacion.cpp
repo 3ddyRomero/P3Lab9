@@ -20,6 +20,14 @@ Civilizacion::Civilizacion(string pName,int pOro, int pMadera, int pPiedra, int 
     Aldeano = pAldeano;
 }
 
+string Civilizacion::getName(){
+    return Name;
+}
+
+void Civilizacion::setName(string pName){
+    Name = pName;
+}
+
 int Civilizacion::getOro(){
     Oro = 0;
     return Oro;
@@ -65,12 +73,12 @@ void Civilizacion::setPoblacion(int pPoblacion){
     Poblacion = pPoblacion;
 }
 
-int Civilizacion::getPoblacion(){
+int Civilizacion::getPoblacionMAX(){
     PoblacionMAX = 200;
     return PoblacionMAX;
 }
 
-void Civilizacion::setPoblacion(int pPoblacionMAX){
+void Civilizacion::setPoblacionMAX(int pPoblacionMAX){
     PoblacionMAX = pPoblacionMAX;
 }
 
@@ -90,6 +98,13 @@ int Civilizacion::getAldeano(){
 
 void Civilizacion::setAldeano(int pAldeano){
     Aldeano = pAldeano;
+}
+
+Tropa* Civilizacion::getTropa(int T){
+    return tropa[T];
+}
+void Civilizacion::addTropa(Tropa* pTropa){
+    tropa.push_back(pTropa);
 }
 
 Civilizacion::~Civilizacion(){

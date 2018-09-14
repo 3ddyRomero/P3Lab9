@@ -21,7 +21,7 @@ class Civilizacion{
         Civilizacion(string,int, int, int, int, int, int, int,int);
 
         string getName();
-        void setName();
+        void setName(string);
 
         int getOro();
 		void setOro(int);

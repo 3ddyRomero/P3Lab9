@@ -16,6 +16,10 @@ void Jugador::setNombre(string pNombre){
     Nombre = pNombre;
 }
 
+Civilizacion* Jugador::getCivilizacion(){
+    return civ;
+}
+
 Jugador::~Jugador(){
 
 }
